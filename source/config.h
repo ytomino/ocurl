@@ -1,3 +1,4 @@
+/* config.h.  Generated from config.h.in by configure.  */
 /* config.h.in.  Generated from configure.in by autoheader.  */
 
 /* Define to 1 if you have the declaration of `CURLE_ABORTED_BY_CALLBACK', and
@@ -6,7 +7,8 @@
 
 /* Define to 1 if you have the declaration of `CURLE_AGAIN', and to 0 if you
    don't. */
-#define HAVE_DECL_CURLE_AGAIN 1
+#define HAVE_DECL_CURLE_AGAIN \
+    (LIBCURL_VERSION_NUM >= 0x060000)
 
 /* Define to 1 if you have the declaration of `CURLE_BAD_CALLING_ORDER', and
    to 0 if you don't. */
@@ -206,11 +208,13 @@
 
 /* Define to 1 if you have the declaration of `CURLE_REMOTE_DISK_FULL', and to
    0 if you don't. */
-#define HAVE_DECL_CURLE_REMOTE_DISK_FULL 1
+#define HAVE_DECL_CURLE_REMOTE_DISK_FULL \
+    (LIBCURL_VERSION_NUM >= 0x060000)
 
 /* Define to 1 if you have the declaration of `CURLE_REMOTE_FILE_EXISTS', and
    to 0 if you don't. */
-#define HAVE_DECL_CURLE_REMOTE_FILE_EXISTS 1
+#define HAVE_DECL_CURLE_REMOTE_FILE_EXISTS \
+    (LIBCURL_VERSION_NUM >= 0x060000)
 
 /* Define to 1 if you have the declaration of `CURLE_REMOTE_FILE_NOT_FOUND',
    and to 0 if you don't. */
@@ -352,10 +356,6 @@
    to 0 if you don't. */
 #define HAVE_DECL_CURLINFO_FTP_ENTRY_PATH 1
 
-/* Define to 1 if you have the declaration of `CURLINFO_REDIRECT_URL', and
-   to 0 if you don't. */
-#define HAVE_DECL_CURLINFO_REDIRECT_URL 1
-
 /* Define to 1 if you have the declaration of `CURLINFO_HEADER_SIZE', and to 0
    if you don't. */
 #define HAVE_DECL_CURLINFO_HEADER_SIZE 1
@@ -388,6 +388,11 @@
    to 0 if you don't. */
 #define HAVE_DECL_CURLINFO_PRETRANSFER_TIME 1
 
+/* Define to 1 if you have the declaration of `CURLINFO_PRIMARY_IP', and to 0
+   if you don't. */
+#define HAVE_DECL_CURLINFO_PRIMARY_IP \
+    (LIBCURL_VERSION_NUM >= 0x071300)
+
 /* Define to 1 if you have the declaration of `CURLINFO_PRIVATE', and to 0 if
    you don't. */
 #define HAVE_DECL_CURLINFO_PRIVATE 1
@@ -403,6 +408,11 @@
 /* Define to 1 if you have the declaration of `CURLINFO_REDIRECT_TIME', and to
    0 if you don't. */
 #define HAVE_DECL_CURLINFO_REDIRECT_TIME 1
+
+/* Define to 1 if you have the declaration of `CURLINFO_REDIRECT_URL', and to
+   0 if you don't. */
+#define HAVE_DECL_CURLINFO_REDIRECT_URL \
+    (LIBCURL_VERSION_NUM >= 0x071202)
 
 /* Define to 1 if you have the declaration of `CURLINFO_REQUEST_SIZE', and to
    0 if you don't. */
@@ -498,7 +508,8 @@
 
 /* Define to 1 if you have the declaration of `CURLOPT_COPYPOSTFIELDS', and to
    0 if you don't. */
-#define HAVE_DECL_CURLOPT_COPYPOSTFIELDS 1
+#define HAVE_DECL_CURLOPT_COPYPOSTFIELDS \
+    (LIBCURL_VERSION_NUM >= 0x071101)
 
 /* Define to 1 if you have the declaration of `CURLOPT_CRLF', and to 0 if you
    don't. */
@@ -519,6 +530,11 @@
 /* Define to 1 if you have the declaration of `CURLOPT_DNS_CACHE_TIMEOUT', and
    to 0 if you don't. */
 #define HAVE_DECL_CURLOPT_DNS_CACHE_TIMEOUT 1
+
+/* Define to 1 if you have the declaration of `CURLOPT_DNS_SERVERS', and to 0
+   if you don't. */
+#define HAVE_DECL_CURLOPT_DNS_SERVERS \
+    (LIBCURL_VERSION_NUM >= 0x071800)
 
 /* Define to 1 if you have the declaration of `CURLOPT_DNS_USE_GLOBAL_CACHE',
    and to 0 if you don't. */
@@ -742,11 +758,13 @@
 
 /* Define to 1 if you have the declaration of `CURLOPT_NEW_DIRECTORY_PERMS',
    and to 0 if you don't. */
-#define HAVE_DECL_CURLOPT_NEW_DIRECTORY_PERMS 1
+#define HAVE_DECL_CURLOPT_NEW_DIRECTORY_PERMS \
+    (LIBCURL_VERSION_NUM >= 0x071004)
 
 /* Define to 1 if you have the declaration of `CURLOPT_NEW_FILE_PERMS', and to
    0 if you don't. */
-#define HAVE_DECL_CURLOPT_NEW_FILE_PERMS 1
+#define HAVE_DECL_CURLOPT_NEW_FILE_PERMS \
+    (LIBCURL_VERSION_NUM >= 0x071004)
 
 /* Define to 1 if you have the declaration of `CURLOPT_NOBODY', and to 0 if
    you don't. */
@@ -760,6 +778,11 @@
    you don't. */
 #define HAVE_DECL_CURLOPT_NOSIGNAL 1
 
+/* Define to 1 if you have the declaration of `CURLOPT_OPENSOCKETFUNCTION',
+   and to 0 if you don't. */
+#define HAVE_DECL_CURLOPT_OPENSOCKETFUNCTION \
+    (LIBCURL_VERSION_NUM >= 0x071101)
+
 /* Define to 1 if you have the declaration of `CURLOPT_PORT', and to 0 if you
    don't. */
 #define HAVE_DECL_CURLOPT_PORT 1
@@ -770,7 +793,8 @@
 
 /* Define to 1 if you have the declaration of `CURLOPT_POST301', and to 0 if
    you don't. */
-#define HAVE_DECL_CURLOPT_POST301 1
+#define HAVE_DECL_CURLOPT_POST301 \
+    (LIBCURL_VERSION_NUM >= 0x071101)
 
 /* Define to 1 if you have the declaration of `CURLOPT_POSTFIELDS', and to 0
    if you don't. */
@@ -804,6 +828,11 @@
    to 0 if you don't. */
 #define HAVE_DECL_CURLOPT_PROGRESSFUNCTION 1
 
+/* Define to 1 if you have the declaration of `CURLOPT_PROTOCOLS', and to 0 if
+   you don't. */
+#define HAVE_DECL_CURLOPT_PROTOCOLS \
+    (LIBCURL_VERSION_NUM >= 0x071304)
+
 /* Define to 1 if you have the declaration of `CURLOPT_PROXY', and to 0 if you
    don't. */
 #define HAVE_DECL_CURLOPT_PROXY 1
@@ -826,7 +855,8 @@
 
 /* Define to 1 if you have the declaration of `CURLOPT_PROXY_TRANSFER_MODE',
    and to 0 if you don't. */
-#define HAVE_DECL_CURLOPT_PROXY_TRANSFER_MODE 1
+#define HAVE_DECL_CURLOPT_PROXY_TRANSFER_MODE \
+    (LIBCURL_VERSION_NUM >= 0x071200)
 
 /* Define to 1 if you have the declaration of `CURLOPT_PUT', and to 0 if you
    don't. */
@@ -848,9 +878,19 @@
    if you don't. */
 #define HAVE_DECL_CURLOPT_READFUNCTION 1
 
+/* Define to 1 if you have the declaration of `CURLOPT_REDIR_PROTOCOLS', and
+   to 0 if you don't. */
+#define HAVE_DECL_CURLOPT_REDIR_PROTOCOLS \
+    (LIBCURL_VERSION_NUM >= 0x071304)
+
 /* Define to 1 if you have the declaration of `CURLOPT_REFERER', and to 0 if
    you don't. */
 #define HAVE_DECL_CURLOPT_REFERER 1
+
+/* Define to 1 if you have the declaration of `CURLOPT_RESOLVE', and to 0 if
+   you don't. */
+#define HAVE_DECL_CURLOPT_RESOLVE \
+    (LIBCURL_VERSION_NUM >= 0x071503)
 
 /* Define to 1 if you have the declaration of `CURLOPT_RESUME_FROM', and to 0
    if you don't. */
@@ -862,7 +902,8 @@
 
 /* Define to 1 if you have the declaration of `CURLOPT_SEEKFUNCTION', and to 0
    if you don't. */
-#define HAVE_DECL_CURLOPT_SEEKFUNCTION 1
+#define HAVE_DECL_CURLOPT_SEEKFUNCTION \
+    (LIBCURL_VERSION_NUM >= 0x071200)
 
 /* Define to 1 if you have the declaration of `CURLOPT_SHARE', and to 0 if you
    don't. */
@@ -874,7 +915,8 @@
 
 /* Define to 1 if you have the declaration of
    `CURLOPT_SSH_HOST_PUBLIC_KEY_MD5', and to 0 if you don't. */
-#define HAVE_DECL_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5 1
+#define HAVE_DECL_CURLOPT_SSH_HOST_PUBLIC_KEY_MD5 \
+    (LIBCURL_VERSION_NUM >= 0x071101)
 
 /* Define to 1 if you have the declaration of `CURLOPT_SSH_PRIVATE_KEYFILE',
    and to 0 if you don't. */
@@ -1004,21 +1046,30 @@
    you don't. */
 #define HAVE_DECL_CURLOPT_WRITEINFO 1
 
-/* Define to 1 if you have the declaration of `CURLOPT_OPENSOCKETFUNCTION', and to 0 if
-   you don't. */
-#undef HAVE_DECL_CURLOPT_OPENSOCKETFUNCTION /* FIXME disabled */
+/* Define to 1 if you have the declaration of `CURL_VERSION_TLSAUTH_SRP', and
+   to 0 if you don't. */
+#define HAVE_DECL_CURL_VERSION_TLSAUTH_SRP \
+    (LIBCURL_VERSION_NUM >= 0x071504)
+
+/* Define to 1 if you have the declaration of `CURL_VERSION_NTLM_WB', and to 0
+   if you don't. */
+#define HAVE_DECL_CURL_VERSION_NTLM_WB \
+    (LIBCURL_VERSION_NUM >= 0x071600)
 
 /* Define to the address where bug reports for this package should be sent. */
-#undef PACKAGE_BUGREPORT
+#define PACKAGE_BUGREPORT ""
 
 /* Define to the full name of this package. */
-#undef PACKAGE_NAME
+#define PACKAGE_NAME ""
 
 /* Define to the full name and version of this package. */
-#undef PACKAGE_STRING
+#define PACKAGE_STRING ""
 
 /* Define to the one symbol short name of this package. */
-#undef PACKAGE_TARNAME
+#define PACKAGE_TARNAME ""
+
+/* Define to the home page for this package. */
+#define PACKAGE_URL ""
 
 /* Define to the version of this package. */
-#undef PACKAGE_VERSION
+#define PACKAGE_VERSION ""
